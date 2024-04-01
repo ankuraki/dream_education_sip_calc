@@ -1,0 +1,1221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dream Education</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js" defer></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        .mmmm{
+          
+            margin-top: 18px;
+           
+        }
+/*         
+.span1 {
+    color:#6f42f5;
+    margin: revert-layer;
+    border: 1px solid rgb(128, 128, 128);
+    background-color: rgba(255, 166, 0, 0.821);
+    text-align: left;
+
+} */
+/*  
+.modal-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content strong {
+    margin-right: 5px;
+}  */
+/* 
+.span2{
+    color : rgb(92, 47, 255);
+    border: 1px solid rgb(128, 128, 128);
+   border-color: red;
+   font-size: 33px;
+   text-align: right;
+
+
+} */
+.calculate {
+  color: red;
+}
+
+button.calculate {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+button.calculate:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.header{
+    text-align: center;
+    font-size: 20px;
+}
+table {
+  font-family: Arial;
+  border-collapse: collapse;
+  width: 95%;
+  border: 1px solid white;
+}
+
+th {
+  border-radius: 10px;
+  text-align: left;
+  padding: 8px;
+  background-color: rgba(255, 166, 0, 0.791);
+  color: black;
+  width: 65%;
+  margin-top: 44px;
+  border: 1px solid white;
+  margin-left: 8px;
+}
+
+td {
+  border-radius: 10px;
+  text-align: center;
+  padding: 8px;
+  background-color: #dddddd;
+  width: 35%;
+  border: 1px solid white;
+}
+/* 
+tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+.btnDow {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px; /* Optional: adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+}
+
+.btnDow:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Change box shadow on hover */
+}
+
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+.para{
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 5px;
+}
+.head{
+    font-size: 18px;
+    text-align: center;
+     margin-top: 12px; 
+    color: black;
+
+
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span1 {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 14px; /* Adjust font size as needed */
+    color: black; /* Text color */
+    background-color:rgba(0, 255, 242, 0.743); /* Background color */
+    padding: 10px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+    
+}
+
+
+.span2 {
+    text-align: right;
+    font-size: 12px; /* Adjust font size as needed */
+    color: #fff; /* Text color */
+    background-color:rgba(0, 0, 0, 0.431);
+    padding: 10px; /* Padding around the content */
+    border-radius: 5px; /* Rounded corners */
+    margin: 4px;
+}
+
+
+.modal-title {
+    color: #333;
+    
+    font-size: 20px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.text {
+  color: orange;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  /* font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  /* text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);  */
+}
+
+.hello1 {
+  color: blue;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);  */
+}
+
+
+
+.custom-container{
+    margin: 7px;
+    padding: 4px ;
+}
+
+        .range-slider {
+            position: relative;
+            width: 100%;
+        }
+    
+        .range-slider__range {
+            /* -webkit-appearance: none; */
+            margin: 10px 0;
+            width: 75%;
+            height: 12px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: opacity 0.2s;
+            transition: opacity 0.2s;
+        }
+      
+
+    
+         .range-slider__range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+             background: #6f42f5a7; 
+            cursor: pointer;
+        }
+    
+        .range-slider__range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+             background: #6f42f5a7; 
+            /* background-color: aqua; */
+            cursor: pointer;
+        }
+    
+        .range-slider__value {
+            display: inline-block;
+            position: absolute; 
+             /* background: #6f42f5a7;  */
+             background-color:blue ;
+            /* background-color: aqua; */
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-align: center;
+            width: 45px;          
+            display: inline-block; 
+   
+        }
+
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  </head>
+  <body>
+    
+    <div class="container-scroller">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+              <a class="navbar-brand " href="#">
+                <img src="img/Training.png" style="height:40px;">
+            </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+               <div class="collapse navbar-collapse ms-auto navbar-menu-wrapper d-flex align-items-center justify-content-end" id="navbarNavDropdown" >
+                <ul class="navbar-nav">
+                
+                  <li class="nav-item dropdown">
+                   
+                    <img src="img/Displayimage.jpeg" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="height: 60px;" alt="">
+                    <ul class="dropdown-menu">
+                      <!-- <li><a class="dropdown-item" href="#">Action</a></li> -->
+                      <li>  <a class="dropdown-item" href="">
+                       
+                        <i class="fa-regular fa-user" style="color: rgb(0, 255, 89);"></i>
+                        
+                        My Profile
+                    </a></li>
+                      <li> <a class="dropdown-item" href="">
+                       
+                        <i class="fa-solid fa-face-surprise" style="color: rgb(0, 255, 89);"></i>
+                        
+                        My Subscription 
+                    </a>
+                    </li>
+                      <li> <a class="dropdown-item" href="">
+                        <i class="fa-solid fa-file-invoice"  style="color: rgb(0, 255, 89);"></i>
+                        Invoice Transaction
+                    </a></li>
+    
+                    <li> <a class="dropdown-item" href="">
+                      <i class="fa-solid fa-gift" style="color: rgb(0, 255, 89);"></i>
+                        
+                        Your Gift Voucher
+                    </a></li>
+    
+                    <li> <a class="dropdown-item" href="">
+                      <i class="fa-solid fa-unlock" style="color: rgb(0, 255, 89);"></i>
+                        
+                        Change Password
+                    </a></li>
+    
+                    <li> <a class="dropdown-item" href="">
+                      <i class="fa-solid fa-right-to-bracket" style="color: rgb(0, 255, 89);"></i>
+                        Signout
+                    </a></li>
+    
+    
+    
+                    </ul>
+                    <!-- <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                        <span class="mdi mdi-menu"></span>
+                    </button> -->
+                  </li>
+                </ul>
+              </div> 
+             
+            </div>
+          </nav>
+    
+        <!-- </div> -->
+    <!-- <div class="mb-2"> -->
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid navbar">
+              <!-- <a class="navbar-brand" href="#">Dashboard</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+             
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link  na" href="home.html">Dashboard</a>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle na" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Marketing Content 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                                  Image Branding Frame</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-images" style="color:rgb(0, 255, 89);"></i>
+                                  Image</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-images " style="color:rgb(0, 255, 89);"></i>
+                                  Social Media Cover Page</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                                  Video</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-brands fa-instalod" style="color:rgb(0, 255, 89);"></i>
+                                  Insta Story</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-store" style="color:rgb(0, 255, 89);"></i>
+                                  
+                                  Stories</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-business-time" style="color:rgb(0, 255, 89);"></i></i>
+                                  Virtual Business Card</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" target="_self">
+                                  <i class="fa-solid fa-audio-description" style="color:rgb(0, 255, 89);"></i>
+                                  Visual Story</a>
+    
+                            </li>
+                        </ul>
+                      </li>
+    
+                      <li class="nav-item dropdown">
+                        <a class="nav-link na dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Sales Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="saleskit.html">
+                                  <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                                  Saleskit Presentation</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="onepagecal.html" >
+                                  <i class="fa-solid fa-images" style="color:rgb(0, 255, 89);"></i>
+                                  One Page Calculators</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="clientproposal.html">
+                                  <i class="fa-solid fa-images " style="color:rgb(0, 255, 89);"></i>
+                                  Client Proposal</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="quickedgecalc.html" target="_self">
+                                  <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                                  Quickedge Calculator</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="investmentsuitability.html" target="_self">
+                                  <i class="fa-brands fa-instalod" style="color:rgb(0, 255, 89);"></i>
+                                  Investment Suitability Profiler</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="suitableprofile.html" target="_self">
+                                  <i class="fa-solid fa-store" style="color:rgb(0, 255, 89);"></i>
+                                  
+                                  Suitability Profiler Data</a>
+    
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="leadresponse.html" target="_self">
+                                  <i class="fa-solid fa-business-time" style="color:rgb(0, 255, 89);"></i></i>
+                                  Lead Response</a>
+    
+                            </li>
+                           
+                        </ul>
+                      </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link na" na href="#">Research</a>
+                  </li>
+    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link na dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Integration
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                              Social Media Integration</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images" style="color:rgb(0, 255, 89);"></i>
+                              Automation</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images " style="color:rgb(0, 255, 89);"></i>
+                              Custom Message</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                              Automation Log</a>
+    
+                        </li>
+                       
+                       
+                       
+                    </ul>
+                  </li>
+    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link na dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Lead Management
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                             All Leads</a>
+    
+                        </li>
+                       
+                        
+                       
+                       
+                    </ul>
+                  </li>
+    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link na dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sublogin
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link " href="" target="_self">
+                              <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                              Sublogin Details</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images" style="color:rgb(0, 255, 89);"></i>
+                              Add Sublogin Member</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images " style="color:rgb(0, 255, 89);"></i>
+                              Buy Sublogin</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                              Employee details</a>
+    
+                        </li>
+                       
+                       
+                       
+                    </ul>
+                  </li>
+    
+    
+                  <li class="nav-item">
+                    <a class="nav-link na" href="#">Training Program</a>
+                  </li>
+    
+                  <li class="nav-item dropdown">
+                    <a class="nav-link na dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Website
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link " href="" target="_self">
+                              <i class="fa-regular fa-image" style="color:rgb(0, 255, 89);"></i>
+                              My Website</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images" style="color:rgb(0, 255, 89);"></i>
+                              All Website Transaction</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-images " style="color:rgb(0, 255, 89);"></i>
+                              Product</a>
+    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="" target="_self">
+                              <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                              All Product Transaction</a>
+    
+                        </li>
+    
+                        <li class="nav-item">
+                          <a class="nav-link" href="" target="_self">
+                            <i class="fa-solid fa-video" style="color:rgb(0, 255, 89);"></i>
+                            Publish Image</a>
+    
+                      </li>
+                       
+                       
+                       
+                    </ul>
+                  </li>
+    
+    
+    
+    
+                 
+                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
+        </div>
+        <h3 style="text-align: center;">Dream Education Calculator</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 grid-margin stretch-card text-center" style="display:block">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="image-upload">
+                                <div class="content_img">
+                                    <!-- <label for="file-input">
+                                        <img src="https://newapps.anchoredge.in/Content/CompleteProfile/thumb/nopic.jpg" class="w-100 previewImage" />
+                                    </label>
+                                    <input id="file-input" style="display: none" type="file" /> -->
+
+                                    <!-- <input type="file" id="myFile" name="filename"> -->
+                                    <input type="file" id="myFile" onchange="displayImage(event)">
+
+                                     <img id="uploadedImage" src=""  height="220px" width="210px">
+                                     
+                                   
+                                    <!-- <button id="displayImage">Display Image</button> -->
+                                </div>
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 grid-margin stretch-card" style="display:block">
+                  <div class="card">
+                      <div class="card-body">
+      
+      
+                          <div class="table-responsive">
+                              <form action="#" id="educationForm" method="post">
+                                  <table class="table table-striped">
+                                      <tr>
+                                          <td>
+                                              <div class="form-group">
+                                                  <label for="name" class=" card-title">Name</label>
+                                                  <input type="text" class="form-control text-size" id="name" placeholder="Name" name="name">
+                                              </div>
+
+                                              
+                                          </td>
+                                          <td>
+      
+                                              <div class="form-group">
+                                                  <label for="childName" class=" card-title">Child name</label>
+                                                  <input type="text" class="form-control text-size" id="childName" placeholder="Child name" name="childName">
+                                              </div>
+      
+      
+                                          </td>
+                                      </tr>
+
+                                     
+
+      
+                                      <tr>
+                                           <td colspan="2">
+                                              <div class="form-group">
+                                                  <label for="childAge"
+                                                  class=" card-title">Child age</label>
+                                                  <div class="range-slider">
+                                                      <input class="range-slider__range input-range" type="range" value="1" min="0" max="50" name="childAge" id="childAge">
+                                                      <input class="range-slider__value range-value" type="text" value="1" id="childAge-value"/>
+      
+                                                  </div>
+                                              </div>
+
+                                             
+                                          </td> 
+                                         
+                                      </tr>
+                                      <tr>
+      
+                                          <td colspan="2">
+                                              <div class="form-group">
+                                                  <label for="educationAge" class=" card-title">Higher education age</label>
+                                                  <div class="range-slider">
+                                                      <input class="range-slider__range input-range" type="range" value="18" min="18" max="50" name="educationAge" id="educationAge">
+                                                      <input class="range-slider__value range-value" value="18" id="educationAge-value" />
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td colspan="2">
+      
+                                              <div class="form-group">
+                                                  <label for="educationCost" class=" card-title">Current cost of higher education </label>
+                                                  <input type="text" class="form-control text-size" id="educationCost" placeholder="Current cost of higher education" name="educationCost">
+                                              </div>
+      
+      
+                                          </td>
+                                         
+                                      </tr>
+                                      <tr>
+      
+                                          <td colspan="2">
+                                              <div class="form-group">
+                                                  <label for="inflation" class=" card-title">Inflation (%)</label>
+                                                  <div class="range-slider">
+                                                      <input class="range-slider__range input-range inflation" type="range" value="4" min="4" max="15" name="inflation" id="inflation">
+                                                      <input class="range-slider__value range-value" value="4" id="inflation-value"/>
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+      
+                                      
+                                      <tr>
+      
+                                          <td colspan="2">
+                                              <div class="form-group">
+                                                  <label for="newinvestment" class=" card-title">Return on new investment (%)</label>
+                                                  <div class="range-slider">
+                                                      <input class="range-slider__range input-range newinvestment" type="range" value="4" min="4" max="20" name="newinvestment" id="newinvestment">
+                                                      <input class="range-slider__value range-value" value="4"  id="newinvestment-value" />
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+
+                                      <div id="results"></div>
+      
+                                      <tr>
+      
+                                          <td colspan="2" class="text-center">
+                                              <div class="form-group">
+                                                <button type="button" class="calculate" id="calculateButton" data-toggle="modal" data-target="#resultsModal">Calculate</button>
+                                              </div>
+                                          </td>
+
+                                                                  
+                                      </tr>
+                                  </table>
+                              </form>
+                          </div>    
+                      </div>
+              
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+      
+    <script>
+       
+        $(document).ready(function() {
+           
+        $('#calculateButton').click(function() {
+            var file = $('#myFile').val();
+            var name = $('#name').val();
+            var childName = $('#childName').val();
+            var currentAge = parseInt($('#childAge').val());
+            var higherEducationAge = parseInt($('#educationAge').val());
+            var currentCost = parseFloat($('#educationCost').val());
+            var inflationRate = parseFloat($('#inflation').val()) / 100;            
+            var returnRate = parseFloat($('#newinvestment').val()) / 100;
+
+      
+           
+
+            const yearsToHigherEducation = higherEducationAge - currentAge;
+
+            const futureValue = currentCost * Math.pow(1 + inflationRate, yearsToHigherEducation);
+    
+            const lumpsumInvestment = futureValue / Math.pow(1 + returnRate, yearsToHigherEducation);
+
+            const monthlyReturnRate = Math.pow(1 + returnRate, 1 / 12);
+    
+            const totalMonths = yearsToHigherEducation * 12;
+    
+            const sipRequired = (futureValue ) *
+                (monthlyReturnRate - 1) / (Math.pow(monthlyReturnRate, totalMonths) - 1);
+
+           
+            var modalContent1 = '<div class="modal-dialog"><div class="modal-content">';
+            modalContent2= '<div> <button class="btnDow" id="download"><i class="fa fa-download"></i> Download</button></div>'
+
+            // var pdfContent = 'Dear ' + name + file + ' Dream Education planning';
+           
+            //   modalContent += '<div class="modal-header"><h5 class="modal-title">Input Data + name</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>';
+           
+            //    var modalContent = '<div class="modal-header"><h5 class="modal-title ">Dear ' + name + ' <br> Dream Education planning </h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>';
+
+            var modalContent = '<div class="modal-header">';
+modalContent += '<h5 class="modal-title">Dear ' + name + ' <br> Dream Education planning</h5>';
+// modalContent += '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+
+// Concatenate the image element inside the modal-header div
+modalContent += '<div>';
+modalContent += '<img src="' + dataURL + '" id="uploadedImage" height="120px" width="130px">';
+modalContent += '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+modalContent += '</div>';
+
+// Close the modal-header div
+modalContent += '</div>';
+
+
+
+            // var modalContent = '<div class="modal-dialog" id="invoice"><div class="modal-content" id="invoice">';
+
+            // modalContent += '<div class="modal-header"><h5 class="modal-title">Dear ' + name + ' <br> Dream Education Planning</h5><button type="button" class="close" data-dismiss="modal">&times;</button></div>';
+
+            // modalContent += '<div class="modal-body"><img id="imagePreview" src="#" alt="Uploaded Image"></div>';
+            // $('#modalContent').html(modalContent);
+
+            //   <button class="btnii"><i class="fa fa-download"></i> Download</button>
+
+            // modalContent+= '<div> <button class="btnii" id="download"><i class="fa fa-download"></i> Download</button></div>'
+            // modalContent+= '<div><button id="download">Download</button></div>'
+
+
+            
+
+
+            modalContent += '<div class="modal-body">';
+            
+            // modalContent += '<p class="para"><strong>Name: </strong>' + name + '</p>';
+            // modalContent += '<div class="custom-container">';
+            // modalContent += '<span class="span1"><strong>Name:</strong></span>';
+            // modalContent += '<span class="span2">' + name + '</span>';
+            // modalContent += '</div>';
+
+            // modalContent += '<p class="para"><strong>Child Name: </strong>' + childName + '</p>';
+
+            // modalContent += '<div class="custom-container">';
+            // modalContent += '<span class="span1"><strong>File:</strong></span>';
+            // modalContent += '<span class="span2">' + file + '</span>';
+            // modalContent += '</div>';
+
+           
+            // var pdfContent = '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>  Dear</strong></span>';
+            // pdfContent += '<span class="span4">' + name + '</span>';
+            // pdfContent += '</div>';
+
+            // pdfContent += '<p class="para">Dream Education planning</p>';
+            
+            // var pdfContent= '<div class="modal-header"><h5 class="modal-title ">Dear ' + name + '<br> Dream Education planning  </h5></div>';
+
+            var pdfContent = '<div class="modal-header"><h5 class="modal-title mmmm">Dear ' + name + '<br>Dream Education planning</h5>';
+            pdfContent += '<img src="' + dataURL + '" id="uploadedImage" height="130px" width="150px"></div>';
+
+
+            
+         //pdfContent += '<p class="header">Dream Education planning </p>';
+
+
+            
+      
+
+        // modalContent += '<div>';
+        // modalContent += '<img src="' +  dataURL + '" id="uploadedImage" height="170px" width="190px">';
+        // modalContent += '</div>';
+
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Child Name:</strong></span>';
+            modalContent += '<span class="span2">' + childName + '</span>';
+            modalContent += '</div>';
+                    
+              
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong> Child Name:</strong></span>';
+            // pdfContent += '<span class="span4">' + childName + '</span>';
+            // pdfContent += '</div>';
+
+            // pdfContent += "<table>";
+
+            // pdfContent += '<img src="' +  dataURL + '" id="uploadedImage" height="170px" width="190px">';
+
+            // pdfContent += "</table>";
+
+
+
+            pdfContent += "<table style='margin-left:22px;'>";
+
+            pdfContent += '<tr><th>Child Name:</th><td>' + childName + '</td></tr>';
+
+            pdfContent += "</table>";
+
+           
+
+                // pdfContent += "<table>";
+                // pdfContent += '<tr><th style="margin-left: 2px;">Child Name:</th><td style="margin-right: 20px;">' + childName + '</td></tr>';
+                // pdfContent += "</table>";
+
+
+
+           
+
+            
+    
+            // modalContent += '<p class="para"><strong>Child age: </strong> ' + currentAge + '</p>';
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Child age:</strong></span>';
+            modalContent += '<span class="span2">' + currentAge + '</span>';
+            modalContent += '</div>';
+
+                     
+           // pdfContent += '<div class="custom-container">';
+           // pdfContent += '<span class="span3"><strong>Child age:</strong></span>';
+           // pdfContent += '<span class="span3">' + currentAge + '</span>';
+            //pdfContent+= '</div>';
+
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Child age:</th><td>' + currentAge + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+            // modalContent += '<p class="para"><strong>Higher education age: </strong> ' + higherEducationAge + '</p>';
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Higher education age:</strong></span>';
+            modalContent += '<span class="span2">' + higherEducationAge + '</span>';
+            modalContent += '</div>';
+
+                     
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Higher education age:</strong></span>';
+            // pdfContent += '<span class="span4">' + higherEducationAge + '</span>';
+            // pdfContent += '</div>';
+
+            
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Higher education age:</th><td>' + higherEducationAge + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+
+    
+            // modalContent += '<p class="para"><strong>Current cost of higher education: </strong> ' + currentCost + '</p>';
+           
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Current cost of higher education:</strong></span>';
+            modalContent += '<span class="span2">' + currentCost + '</span>';
+            modalContent += '</div>';
+
+                     
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Current cost of higher education:</strong></span>';
+            // pdfContent += '<span class="span4">' +  currentCost  + '</span>';
+            // pdfContent += '</div>';
+
+              
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Current cost of higher education:</th><td>' + currentCost  + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+
+            
+
+    
+            // modalContent += '<p class="para"><strong>Inflation (%): </strong> ' + (inflationRate * 100).toFixed(0) + '%</p>';
+
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Inflation (%):</strong></span>';
+            modalContent += '<span class="span2">' + (inflationRate * 100).toFixed(0) + '%' + '</span>';
+            modalContent += '</div>';
+
+                      
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Inflation (%):</strong></span>';
+            // pdfContent += '<span class="span4">' +  (inflationRate * 100).toFixed(0) + '%'   + '</span>';
+            // pdfContent += '</div>';
+
+               
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Inflation (%):</th><td>' +  (inflationRate * 100).toFixed(0) + '%'  + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+
+
+    
+    
+            // modalContent += '<p class="para"><strong>Return on new investment (%): </strong> ' + (returnRate * 100).toFixed(0) + '%</p>';          
+         
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Return on new investment (%):</strong></span>';
+            modalContent += '<span class="span2">' + (returnRate * 100).toFixed(0) + '%' + '</span>';
+            modalContent += '</div>';
+
+                       
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Return on new investment (%):</strong></span>';
+            // pdfContent += '<span class="span4">' +  + (returnRate * 100).toFixed(0) + '%' + '</span>';
+            // pdfContent += '</div>';
+
+                 
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Return on new investment (%):</th><td>' + (returnRate * 100).toFixed(0) + '%' + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+
+    
+    
+         modalContent += '<p class="text">Calculation based on above assumptions</p>';
+
+        //  modalContent += '<img src="img/auto.jpg" alt="Image Description">';
+        
+         pdfContent += '<p class="text"> Calculation   based on above assumptions </p>'
+
+
+        // modalContent += '<hr style="border-top: 2px solid #007bff; margin-top: 20px; margin-bottom: 20px;">';
+
+    
+            // modalContent += '<p class="para"><strong>Future Value of Education Funding: </strong> ' + futureValue.toFixed(0) + '</p>';
+
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Future Value of Education Funding:</strong></span>';
+            modalContent += '<span class="span2">' + futureValue.toFixed(0) + '</span>';
+            modalContent += '</div>';
+
+            
+                       
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Future Value of Education Funding:</strong></span>';
+            // pdfContent += '<span class="span4">' +  futureValue.toFixed(0) + '</span>';
+            // pdfContent += '</div>';
+
+                  
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr><th>Future Value of Education Funding:</th><td>' +  futureValue.toFixed(0) + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+
+
+
+    
+
+
+    
+            // modalContent += '<p class="para"><strong>Lump Sum Investment Required to Achieve Goal: </strong> ' + lumpsumInvestment.toFixed(0) + '</p>';
+
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>Lump Sum Investment Required to Achieve Goal:</strong></span>';
+            modalContent += '<span class="span2">' +lumpsumInvestment.toFixed(0)  + '</span>';
+            modalContent += '</div>';
+
+             
+                       
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>Lump Sum Investment Required to Achieve Goal:</strong></span>';
+            // pdfContent += '<span class="span4">' +  lumpsumInvestment.toFixed(0) + '</span>';
+            // pdfContent += '</div>';
+
+                    
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr class="sip"><th>Lump Sum Investment Required to Achieve Goal:</th><td>' +   lumpsumInvestment.toFixed(0) + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+          
+
+
+
+    
+            // modalContent += '<p class="para"><strong>SIP Required to Achieve Goal: </strong> ' + sipRequired.toFixed(0) + '</p>';
+
+            modalContent += '<div class="custom-container">';
+            modalContent += '<span class="span1"><strong>SIP Required to Achieve Goal:</strong></span>';
+            modalContent += '<span class="span2">' +sipRequired.toFixed(0)  + '</span>';
+            modalContent += '</div>';
+
+                       
+            // pdfContent += '<div class="custom-container">';
+            // pdfContent += '<span class="span3"><strong>SIP Required to Achieve Goal:</strong></span>';
+            // pdfContent += '<span class="span4">' + sipRequired.toFixed(0) + '</span>';
+            // pdfContent += '</div>';
+
+                     
+            pdfContent += "<table style='margin-left:22px;'>";
+                pdfContent += '<tr class="sip"><th>SIP Required to Achieve Goal:</th><td>' +   sipRequired.toFixed(0) + '</td></tr>';
+               
+                pdfContent += "</table>";
+
+            
+                modalContent += '<img src="img/auto.jpg" alt="Image Description" style="display: block; margin: 0 auto; max-width: 36%; max-height: 36vh;">';
+
+                
+                pdfContent += '<img src="img/auto.jpg" alt="Image Description" style="display: block; margin: 0 auto; max-width: 34%; max-height: 32vh;">';
+
+
+
+
+
+
+
+
+
+           
+            // modalContent += '<img src="sip.png" alt="Girl in a jacket" width="500" height="600">';
+             
+            modalContent += '<h3 class="head">Rajesh Kumar Singh</h3>';
+            modalContent += '<p class="para">AMFI Registered Mutual Fund Distributor</p>';
+            modalContent += '<p class="para">support@autowealth.in</p>';
+            modalContent += '<p class="para">9341059619</p>';
+            modalContent += '<p class="para">120/B,1st floor, Malleshpalya,Bangalore 560075</p>';
+            modalContent += '<p class="para">https://www.autowealth.in</p>';
+            modalContent += '<h3 class="head">Disclamier</h3>';
+            modalContent += '<p class="para">The above calculation is only for illustrative purposes.</p>';
+            modalContent += '<p class="para">Mutual Fund investments are subject to market risks,read all scheme related documents carefully.</p>';
+
+              
+            pdfContent += '<h3 class="head">Rajesh Kumar Singh</h3>';
+            pdfContent += '<p class="para">AMFI Registered Mutual Fund Distributor</p>';
+            pdfContent += '<p class="para">support@autowealth.in</p>';
+            pdfContent += '<p class="para">9341059619</p>';
+            pdfContent += '<p class="para">120/B,1st floor, Malleshpalya,Bangalore 560075</p>';
+            pdfContent += '<p class="para">https://www.autowealth.in</p>';
+            pdfContent += '<h3 class="head">Disclamier</h3>';
+            pdfContent += '<p class="para">The above calculation is only for illustrative purposes.</p>';
+            pdfContent += '<p class="para">Mutual Fund investments are subject to market risks,read all scheme related documents carefully.</p>';
+
+
+
+    
+            modalContent += '</div></div></div>';
+    
+            var modal = '<div class="modal fade" id="inputModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">';
+            modal += modalContent1 +modalContent2 + modalContent +'</div>';
+            $(document.body).append(modal);
+            $('#inputModal').modal('show');
+
+
+            document.getElementById('download').addEventListener('click', () => {
+            const invoice = document.getElementById('invoice');
+            // console.log(invoice);
+            html2pdf().from(pdfContent).save();
+
+
+        });
+        });
+    });   
+</script>
+ 
+<script>
+    dataURL=""
+    function displayImage(event) {
+    var input = event.target;
+    var reader = new FileReader();
+    
+    reader.onload = function(){
+         dataURL = reader.result;
+        var img = document.getElementById('uploadedImage');
+        img.src = dataURL;
+    };
+
+    reader.readAsDataURL(input.files[0]);
+}
+</script> 
+
+       
+       
+         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js" defer></script> -->
+         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" defer></script> 
+      -->
+
+<!-- 
+        <script>
+            document.getElementById('download').addEventListener('click', () => {
+            const invoice = document.getElementById('invoice');
+            console.log(invoice);
+            html2pdf().from(invoice).save();
+
+            
+
+
+        });
+        </script>
+
+     -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>  -->
+    <script>
+        // Function to initialize sliders
+        function initSlider(sliderId, valueId) {
+            var slider = document.getElementById(sliderId);
+            var value = document.getElementById(valueId);
+    
+            // Update the value display when slider is moved
+            slider.addEventListener('input', function() {
+                value.value = slider.value;
+            });
+        }
+
+       
+        // Initialize sliders
+        initSlider('childAge', 'childAge-value');
+        initSlider('educationAge', 'educationAge-value');
+        initSlider('inflation', 'inflation-value');     
+        initSlider('newinvestment', 'newinvestment-value');
+       
+    </script>
+   
+<!-- 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ -->
+
+    
+  </body>
+</html>
